@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import  styles from './index.module.css';
-import { useInView } from 'react-intersection-observer';
 
 function Navbar() {
   // adding the states 
