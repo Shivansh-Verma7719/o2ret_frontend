@@ -34,11 +34,11 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-1 md:p-8"
+      className="h-[60rem] md:h-[60rem] w-full flex items-center justify-center relative p-1 md:p-8"
       ref={containerRef}
     >
       <div
-        className="py-10 md:py-40 w-full relative"
+        className="py-10 md:py-20 w-full relative"
         style={{
           perspective: "1000px",
         }}
@@ -60,7 +60,7 @@ export const Header = ({ translate, titleComponent }: any) => {
       style={{
         translateY: translate,
       }}
-      className="div max-w-5xl mx-auto text-center"
+      className="div max-w-4xl mx-auto text-center"
     >
       {titleComponent}
     </motion.div>
@@ -84,7 +84,7 @@ export const Card = ({
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-4xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
     <img src='' alt="Roadmap" className="w-full h-full object-cover" />
     </motion.div>
@@ -93,7 +93,7 @@ export const Card = ({
 
 export function HeroScroll() {
     return (
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col w-full overflow-hidden">
         <ContainerScroll
           titleComponent={
             <>

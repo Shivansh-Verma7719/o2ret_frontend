@@ -15,7 +15,7 @@ const Landing: React.FC = () => {
         <Navbar />
         <main>
         <TracingBeam className='px-7'>
-        <div className='no-scrollbar w-full flex items-center justify-center flex-col antialiased relative'>
+        <div className='w-full flex items-center justify-center flex-col antialiased relative'>
         <Sparkles />
         <LampContainer className='section'>
         <TextGenerateEffect className='ml-20 md:ml-10' words='Oxygenate Your Offline Retail Journey' />
