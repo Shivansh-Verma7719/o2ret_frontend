@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import  styles from './index.module.css';
+import { useInView } from 'react-intersection-observer';
+
 function Navbar() {
   // adding the states 
   const [isActive, setIsActive] = useState(false);
@@ -12,17 +14,25 @@ function Navbar() {
     setIsActive(false)
   }
 
-  const [scroll, setScroll] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 10);
-    });
-  });
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 7;
+      setIsSticky(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  // ${scroll ? styles.sticky : ""}
   return (
     <div className="App" style={{ zIndex: 1000 }}>
       <header className="App-header">
-        <nav className={`${styles.navbar} ${scroll ? styles.sticky : ""}`}>
+        <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
           <a href='/' className={`${styles.logo}`}>o2ret </a>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
           <li onClick={removeActive}>

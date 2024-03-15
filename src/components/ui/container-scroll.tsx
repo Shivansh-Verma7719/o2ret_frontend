@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import img from "../../assets/images/analytics_stock.jpg";
 
 export const ContainerScroll = ({
   titleComponent
@@ -86,7 +87,7 @@ export const Card = ({
       }}
       className="max-w-4xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
-    <img src='' alt="Roadmap" className="w-full h-full object-cover" />
+    <img src={img} alt="Roadmap" className="w-full h-full object-cover" />
     </motion.div>
   );
 };
