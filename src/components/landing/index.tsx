@@ -1,17 +1,31 @@
 import React from 'react';
 import Sparkles from '../ui/sparkles';
 import  TextGenerateEffect from '../ui/text-generate';
-import TracingBeam from '../ui/tracing-beam'; 
+import TracingBeam from '../ui/tracing-beam';
+import HeroScroll from '../ui/container-scroll';
+import Navbar from '../navbar/index';
+import { LampContainer } from '../ui/lamp';
+import StickyScrollReveal from '../ui/sticky-scroll';
+import './index.css';
+import Typewriter from '../ui/typewriter';
 
 const Landing: React.FC = () => {
     return (
         <>
-        <TracingBeam className='px-6'>
-        <div className='max-w-2xl mx-auto antialiased pt-4 relative'>
+        <Navbar />
+        <main>
+        <TracingBeam className='px-7'>
+        <div className='no-scrollbar w-full flex items-center justify-center flex-col antialiased relative'>
         <Sparkles />
-        <TextGenerateEffect words='Level up your distributer management with O2RET.' />
+        <LampContainer className='section'>
+        <TextGenerateEffect className='ml-20 md:ml-10' words='Oxygenate Your Offline Retail Journey' />
+        </LampContainer>
+        <HeroScroll />
+        <StickyScrollReveal/>
+        <Typewriter />
         </div>
         </TracingBeam>
+        </main>
         
         </>
     );

@@ -1,5 +1,35 @@
 .section{
+    height: 600px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .section{
+        height: 700px !important;
+    }
+    
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+
+.no-scrollbar {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.cont{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
