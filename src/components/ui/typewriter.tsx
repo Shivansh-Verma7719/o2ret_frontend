@@ -126,12 +126,13 @@ export function Typewriter() {
         </p>
         <TypewriterEffect words={words} />
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 py-3">
-        <button className="w-42 p-2 h-12 rounded-xl bg-black border border-white border-transparent text-white text-sm">
+        <a href="https://forms.gle/m7PKUbVCs9sJfWoU6"> <button className="w-42 p-2 h-12 rounded-xl bg-black border border-white border-transparent text-white text-sm">
           Become our distribution partner
-        </button>
+        </button></a>
+        <a href="https://forms.gle/jzpoy8iTzcNTFtnU8">
         <button className="w-42 p-2 h-12 rounded-xl bg-white text-black border border-black  text-sm">
           Join our brand waitlist
-        </button>
+        </button></a>
       </div>
       </div>
     );
