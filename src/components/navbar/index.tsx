@@ -23,19 +23,19 @@ function Navbar() {
     <div className="App" style={{ zIndex: 1000 }}>
       <header className="App-header">
         <nav className={`${styles.navbar} ${scroll ? styles.sticky : ""}`}>
-          <a href='#home' className={`${styles.logo}`}>Dev. </a>
+          <a href='/' className={`${styles.logo}`}>o2ret </a>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
-            <li onClick={removeActive}>
+          <li onClick={removeActive}>
               <a href='#home' className={`${styles.navLink}`}>Home</a>
             </li>
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>Catalog</a>
+              <a href='#about' className={`${styles.navLink}`}>About us</a>
             </li>
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>All products</a>
-            </li>
+              <a href='#team' className={`${styles.navLink}`}>Our team</a>
+            </li> 
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>Contact</a>
+              <a href='#contact' className={`${styles.navLink}`}>Contact</a>
             </li>
           </ul>
           <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`}  onClick={toggleActiveClass}>
