@@ -21,10 +21,10 @@ function Navbar() {
       setIsSticky(isScrolled);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.onscroll = handleScroll;
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.onscroll = null; // Cleanup function
     };
   }, []);
   // ${scroll ? styles.sticky : ""}
