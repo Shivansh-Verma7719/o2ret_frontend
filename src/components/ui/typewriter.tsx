@@ -106,10 +106,13 @@ export function Typewriter() {
         text: "your",
       },
       {
-        text: "distributer",
+        text: "offline",
       },
       {
-        text: "management",
+        text: "retail",
+      },
+      {
+        text: "journey",
       },
       {
         text: "with",
