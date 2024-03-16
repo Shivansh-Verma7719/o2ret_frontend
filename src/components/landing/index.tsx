@@ -11,6 +11,7 @@ import Typewriter from '../ui/typewriter';
 import ThreeDCard from '../ui/3dcard';
 import pf1 from '../../assets/images/shivansh-verma.jpg';
 import pf2 from '../../assets/images/tejas-mehta.jpg';
+import CardStacks from '../ui/card-stack';
 
 const Landing: React.FC = () => {
     return (

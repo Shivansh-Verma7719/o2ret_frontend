@@ -106,7 +106,7 @@ const content = [
     {
         title: "What we do",
         description:
-          "Community first offline GTM in Tier-1s/2s via shelf space aggregation of prime retail locationsModern Trade/A+ Stores, HoReCa opportunities, gyms, mall pop-ups and salons for consumers with high disposable incomes. Helps in consumer acquisition and community creation. Pre-defined LOC and other terms for easy expansion.",
+          "We are building to help digitally native product-first beauty/personal care + F&B D2C brands in their O2O (Online-to-Offline) journey with a tech-enabled-community-first offline GTM approach with three main offerings:",
         content: (
           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--blue-500))] flex items-center justify-center text-white">
             <b>What we do</b>
@@ -116,7 +116,7 @@ const content = [
   {
     title: "Distributor aggregation",
     description:
-      "Distributor aggregation for reaching valueseeking audiences and ensuring repetitive purchases (retention). Helps push products to kiranas and other sales channels to reach target consumers. Onboarding distributors/retailers on ONDC.",
+      "Distributor aggregation for reaching value-seeking audiences and ensuring repetitive purchases (retention). Helps push products to general trade and other sales channels to reach target consumers. Onboarding distributors/retailers on ONDC.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         <b>Distributor aggregation</b>
@@ -126,7 +126,7 @@ const content = [
   {
     title: "Location Analytics",
     description:
-      "Leveraging Google Analytics for tracking Maps-based user-location behavior. Helps in competitive landscaping and development of AI-based expansion strategies. Can also be leveraged for strategising openings of independant brick and mortar stores.",
+      "Leveraging user-location, search intent, geolocation/spatial data analysis. Helping brands make AI-based offline expansion strategies. We analyze current distributors/shelf-space presence and marry that with possibilities of expansion (getting potential distributors and shelf-space providers). Can also be leveraged for strategizing the opening of brick-and-mortar stores.",
     content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--red-500))] flex items-center justify-center text-white">
         <b>Location Analytics</b>
@@ -134,12 +134,12 @@ const content = [
     ),
   },
   {
-    title: "In the future",
+    title: "Shelf-space acquisition and curation",
     description:
-      "Subcategory diversification(expand to all of CPG) and In-store sales analytics using Computer Vision/POS P.S. Brands pay platform fees for all this, no cost to the retailers or the distributors",
+      "At Modern Trade/A+ Stores/HoReCa outlets/gyms/mall pop-ups/salons etc. Helps get offline brand discovery thus aiding in purchase intent on marketplaces (reducing your CAC/Retention Costs on Marketplaces and getting traffic to your websites) Also, it’s your entry into ~95% of India’s retail market",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        <b>In the future</b>
+        <b>Shelf-space acquisition and curation</b>
       </div>
     ),
   },
