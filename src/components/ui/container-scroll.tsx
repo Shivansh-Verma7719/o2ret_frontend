@@ -98,9 +98,9 @@ export function HeroScroll() {
         <ContainerScroll
           titleComponent={
             <>
-              <h1 className="text-4xl font-semibold text-white">
+              <h1 className="text-4xl font-semibold text-white md:translate-y-0 translate-y-12">
               Level up your distributer management with <br />
-                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                <span className="text-5xl md:text-[6rem] font-bold md:translate-y-0 translate-y-12 mt-1 leading-none">
                   o2ret
                 </span>
               </h1>
