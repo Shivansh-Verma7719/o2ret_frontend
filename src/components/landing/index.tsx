@@ -11,6 +11,7 @@ import Typewriter from '../ui/typewriter';
 import ThreeDCard from '../ui/3dcard';
 import pf1 from '../../assets/images/shivansh-verma.jpg';
 import pf2 from '../../assets/images/tejas-mehta.jpg';
+import RevealOnScroll from '../ui/reveal-scroll';
 
 const Landing: React.FC = () => {
     return (
@@ -23,14 +24,27 @@ const Landing: React.FC = () => {
         <LampContainer className='section'>
         <TextGenerateEffect className='md:ml-20 ml-10' words='Oxygenate Your Offline Retail Journey' />
         </LampContainer>
+
+        <RevealOnScroll>
         <HeroScroll />
+        </RevealOnScroll>
+
+        <RevealOnScroll>
         <a id='about'><StickyScrollReveal/></a>
-        <h1 className="text-white text-6xl mt-5">Our Team</h1>
+        </RevealOnScroll>
+
+
+        <RevealOnScroll>
+        <h1 className="text-white text-center text-6xl mt-5">Our Team</h1>
         <a id='team' className='flex flex-col md:flex-row mt-5 md:mt-0'>
              <ThreeDCard name="Tejas Mehta" link="https://www.linkedin.com/in/tejas-mehta-064b9118b/" title='Co-founder & CEO' image={pf2} description='Interested in building, selling and scaling solutions for Bharat’s CPG space since high school. Ex-cofounder of WhyQ(a kirana-tech solution). Brand-building/PR for luxury F&B brands @Beam&Words. Worked on e-commerce analytics @1digitalstack (developed an understanding of marketplaces). Computer Science Sophomore @Ashoka University.'/> 
              <ThreeDCard name="Shivansh Verma" link="https://www.linkedin.com/in/shivanshvermao8/" title='Co-founder & CTO' image={pf1} description='CS Freshman @ Ashoka University experienced in app development and system design since high school. Worked on several projects using JS and Python. Worked on outreach and growth using tech for non-profits. Built a practice stock trading platform Testock (worked on integrating analytics and stock predictions) Interested in analytics and market optimization'/>
              </a>
+        </RevealOnScroll>
+
+        <RevealOnScroll>
         <a id='contact'><Typewriter /></a>
+        </RevealOnScroll>
         
         </div>
         </TracingBeam>
