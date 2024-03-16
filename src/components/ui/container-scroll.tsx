@@ -26,7 +26,7 @@ export const ContainerScroll = ({
   }, []);
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
+    return isMobile ? [0.7, 1] : [1.05, 1];
   };
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
@@ -35,7 +35,7 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[60rem] w-full flex items-center justify-center relative p-1 md:p-8"
+      className="h-[50rem] md:h-[60rem] w-full flex items-center justify-center relative p-1 md:p-8"
       ref={containerRef}
     >
       <div
@@ -87,7 +87,7 @@ export const Card = ({
       }}
       className="max-w-4xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
-    <img src={img} alt="Roadmap" className="w-full h-full object-cover" />
+    <img src={img} alt="analytics" className="w-full h-full object-cover" />
     </motion.div>
   );
 };

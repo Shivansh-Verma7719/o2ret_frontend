@@ -26,7 +26,8 @@ const Landing: React.FC = () => {
         </LampContainer>
         <HeroScroll />
         <a id='about'><StickyScrollReveal/></a>
-        <a id='team' className='flex flex-col md:flex-row mt-7'>
+        <h1 className="text-white text-6xl mt-5">Our Team</h1>
+        <a id='team' className='flex flex-col md:flex-row mt-5 md:mt-0'>
              <ThreeDCard title='Co-founder & CEO' image={pf2} description='Interested in building, selling and scaling solutions for Bharat’s CPG space since high school. Ex-cofounder of WhyQ(a kirana-tech solution). Brand-building/PR for luxury F&B brands @Beam&Words. Worked on e-commerce analytics @1digitalstack (developed an understanding of marketplaces). Computer Science Sophomore @Ashoka University.'/> 
              <ThreeDCard title='Co-founder & CTO' image={pf1} description='CS Freshman @ Ashoka University experienced in app development and system design since high school. Worked on several projects using JS and Python. Worked on social outreach and growth using tech for non-profits. Built a practice stock trading platform Testock (worked on integrating analytics and stock predictions) Interested in analytics and market optimization'/>
              </a>
