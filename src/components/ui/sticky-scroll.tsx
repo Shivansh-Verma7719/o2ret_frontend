@@ -113,36 +113,36 @@ const content = [
           </div>
         ),
       },
-  {
-    title: "Distributor aggregation",
-    description:
-      "Distributor aggregation for reaching value-seeking audiences and ensuring repetitive purchases (retention). Helps push products to general trade and other sales channels to reach target consumers. Onboarding distributors/retailers on ONDC.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        <b>Distributor aggregation</b>
-      </div>
-    ),
-  },
-  {
-    title: "Location Analytics",
-    description:
-      "Leveraging user-location, search intent, geolocation/spatial data analysis. Helping brands make AI-based offline expansion strategies. We analyze current distributors/shelf-space presence and marry that with possibilities of expansion (getting potential distributors and shelf-space providers). Can also be leveraged for strategizing the opening of brick-and-mortar stores.",
-    content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--red-500))] flex items-center justify-center text-white">
-        <b>Location Analytics</b>
-      </div>
-    ),
-  },
-  {
-    title: "Shelf-space acquisition and curation",
-    description:
-      "At Modern Trade/A+ Stores/HoReCa outlets/gyms/mall pop-ups/salons etc. Helps get offline brand discovery thus aiding in purchase intent on marketplaces (reducing your CAC/Retention Costs on Marketplaces and getting traffic to your websites) Also, it’s your entry into ~95% of India’s retail market",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        <b>Shelf-space acquisition and curation</b>
-      </div>
-    ),
-  },
+    {
+      title: "Location Analytics",
+      description:
+        "Leveraging user-location, search intent, geolocation/spatial data analysis. Helping brands make AI-based offline expansion strategies. We analyze current distributors/shelf-space presence and marry that with possibilities of expansion (getting potential distributors and shelf-space providers). Can also be leveraged for strategizing the opening of brick-and-mortar stores.",
+      content: (
+          <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--red-500))] flex items-center justify-center text-white">
+          <b>Location Analytics</b>
+        </div>
+      ),
+    },
+    {
+      title: "Distributor aggregation",
+      description:
+        "Distributor aggregation for reaching value-seeking audiences and ensuring repetitive purchases (retention). Helps push products to general trade and other sales channels to reach target consumers. Onboarding distributors/retailers on ONDC.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          <b>Distributor aggregation</b>
+        </div>
+      ),
+    },
+    {
+      title: "Shelf-space acquisition and curation",
+      description:
+        "At Modern Trade/A+ Stores/HoReCa outlets/gyms/mall pop-ups/salons etc. Helps get offline brand discovery thus aiding in purchase intent on marketplaces (reducing your CAC/Retention Costs on Marketplaces and getting traffic to your websites) Also, it’s your entry into ~95% of India’s retail market",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          <b>Shelf-space acquisition and curation</b>
+        </div>
+      ),
+    },
 ];
 export function StickyScrollReveal() {
   return (

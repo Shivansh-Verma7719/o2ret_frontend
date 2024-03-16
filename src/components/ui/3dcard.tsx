@@ -158,9 +158,13 @@ export const useMouseEnter = () => {
 export function ThreeDCard1({
     title,
     description,
+    name,
+    link,
     image
 }: {
     title: string;
+    name: string;
+    link: string;
     description: string;
     image: string;
 }) {
@@ -171,6 +175,7 @@ return (
                 translateZ="50"
                 className="text-xl font-bold text-white"
             >
+                <a href={link} className="text-2xl">{name}</a> <br/>
                 {title}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4">
