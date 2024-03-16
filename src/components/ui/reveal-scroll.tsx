@@ -20,7 +20,7 @@ const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
             };
         }, []);
      
-        const classes = `transition-opacity duration-1500
+        const classes = `transition-opacity duration-2000
             ${isVisible ? "opacity-100" : "opacity-0"
             }`;
      
