@@ -41,7 +41,7 @@ function Navbar() {
               <a href='#about' className={`${styles.navLink}`}>About us</a>
             </li>
             <li onClick={removeActive}>
-              <a href='#team' className={`${styles.navLink}`}>Our team</a>
+              <a href='#team' className={`${styles.navLink}`}>Our Team</a>
             </li> 
             <li onClick={removeActive}>
               <a href='#contact' className={`${styles.navLink}`}>Contact</a>
