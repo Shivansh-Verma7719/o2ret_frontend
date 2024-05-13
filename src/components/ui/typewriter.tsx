@@ -130,12 +130,12 @@ export function Typewriter() {
         
         <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-0 items-center justify-center py-6">
           
-        <a href="https://forms.gle/jzpoy8iTzcNTFtnU8">
+        <a href="https://forms.gle/m7PKUbVCs9sJfWoU6">
         <button className="md:mx-2 w-42 p-2 h-12 rounded-xl bg-white text-black border border-o2ret-blue text-sm">
         Become our distribution partner
         </button></a>
 
-        <a href="https://forms.gle/m7PKUbVCs9sJfWoU6"> <button className="text-white w-42 p-2 h-12 md:mx-2 rounded-xl bg-o2ret-blue border border-white border-transparent text-white text-sm">
+        <a href="https://forms.gle/jzpoy8iTzcNTFtnU8"> <button className="text-white w-42 p-2 h-12 md:mx-2 rounded-xl bg-o2ret-blue border border-white border-transparent text-white text-sm">
           Join our brand waitlist
         </button></a>
         
