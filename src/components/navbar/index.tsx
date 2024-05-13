@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import  styles from './index.module.css';
+import Logo from '../../assets/images/logo.png';
 
 function Navbar() {
   // adding the states 
@@ -32,7 +33,7 @@ function Navbar() {
     <div className="App" style={{ zIndex: 1000 }}>
       <header className="App-header">
         <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
-          <a href='/' className={`${styles.logo}`}>o2ret </a>
+          <a href='/' className={`${styles.logo}`}><img src={Logo} alt="Logo" width={200}/> </a>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
           <li onClick={removeActive}>
               <a href='#home' className={`${styles.navLink}`}>Home</a>

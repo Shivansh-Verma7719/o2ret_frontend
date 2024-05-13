@@ -170,10 +170,10 @@ export function ThreeDCard1({
 }) {
 return (
     <CardContainer className="inter-var mx-4">
-        <CardBody className="bg-gray-50 relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardBody className="bg-gray-50 relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-rgb(250, 247, 240) border-black/[1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
             <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-white"
+                className="text-xl font-bold text-black"
             >
                 <a href={link} className="text-2xl">{name}</a> <br/>
                 {title}
@@ -189,7 +189,7 @@ return (
                 <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-sm max-w-sm mt-2 text-neutral-300"
+                    className="text-sm max-w-sm mt-2 text-black"
                 >
                     {description}
                 </CardItem>

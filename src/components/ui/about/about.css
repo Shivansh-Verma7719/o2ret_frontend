@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Neue Regrade Extrabold";
+    src:
+      local("Neue_Regrade_Extrabold"),
+      url("../../../assets/fonts/Neue_Regrade_Extrabold.otf") format("opentype"),
+  }
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -3rem;
+  }
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 7rem;
+}
+
+.about-text{
+    margin-left: auto;
+    width: 40%;
+}
+
+.about-text2{
+    margin-right: auto;
+    width: 50%;
+}
+
+
+  h1, h2 {
+    color: rgb(0, 63, 152);
+    font-size: 40px;
+    font-family: "Neue Regrade Extrabold", serif;
+  }
+  
+  p {
+    color: #6A7BA2;
+    font-size: 24px;
+  }
+  
+  .image {
+    width: 25%; /* Adjust based on your design */
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+    .about-text{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .about-text2{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .image{
+      display: none;
+    }
+    
+  }
+  

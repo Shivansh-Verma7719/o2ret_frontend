@@ -1,0 +1,18 @@
+.footer{
+    background-color: #fed4e4;
+    text-align: center;
+    font-family: 'Satoshi', sans-serif !important;
+}
+.email{
+    font-size: 2.5em;
+}
+@media screen and (max-width: 600px){
+    .email{
+        font-size: 1.5em;
+    }
+    .footer{
+        font-size: 1em;
+    }
+  
+}
+  

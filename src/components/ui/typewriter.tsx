@@ -54,7 +54,7 @@ export const TypewriterEffect = ({
                   initial={{}}
                   key={`char-${index}`}
                   className={cn(
-                    `text-white opacity-0 hidden`,
+                    `text-o2ret-blue opacity-0 hidden`,
                     word.className
                   )}
                 >
@@ -119,23 +119,26 @@ export function Typewriter() {
       },
       {
         text: "o2ret.",
-        className: "text-blue-500 dark:text-blue-500",
       },
     ];
     return (
       <div className="flex flex-col items-center justify-center h-[18rem]">
-        <p className="text-neutral-600 dark:text-neutral-200 text-md sm:text-base  ">
+        <p className="text-black dark:text-neutral-200 text-md sm:text-base  ">
           <b>Get started with us Excited!</b>
         </p>
         <TypewriterEffect words={words} />
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 py-3">
-        <a href="https://forms.gle/m7PKUbVCs9sJfWoU6"> <button className="w-42 p-2 h-12 rounded-xl bg-black border border-white border-transparent text-white text-sm">
-          Become our distribution partner
-        </button></a>
+        
+        <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-0 items-center justify-center py-6">
+          
         <a href="https://forms.gle/jzpoy8iTzcNTFtnU8">
-        <button className="w-42 p-2 h-12 rounded-xl bg-white text-black border border-black  text-sm">
+        <button className="md:mx-2 w-42 p-2 h-12 rounded-xl bg-white text-black border border-o2ret-blue text-sm">
+        Become our distribution partner
+        </button></a>
+
+        <a href="https://forms.gle/m7PKUbVCs9sJfWoU6"> <button className="text-white w-42 p-2 h-12 md:mx-2 rounded-xl bg-o2ret-blue border border-white border-transparent text-white text-sm">
           Join our brand waitlist
         </button></a>
+        
       </div>
       </div>
     );

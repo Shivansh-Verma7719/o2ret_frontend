@@ -13,10 +13,10 @@ body::-webkit-scrollbar {
 display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 body {
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
+background-color: #faf7f0;
 }
 
 .no-scrollbar::-webkit-scrollbar {

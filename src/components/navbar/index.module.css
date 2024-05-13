@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "Neue Regrade Extrabold";
+  src:
+    local("Neue_Regrade_Extrabold"),
+    url("../../assets/fonts/Neue_Regrade_Extrabold.otf") format("opentype"),
+}
+
 .navbar {
     padding: 0;
     margin: 0;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   ul {
@@ -11,26 +18,29 @@
   
   a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 28px;
+    color: rgb(0, 63, 152);
+    font-family: "Neue Regrade Extrabold", serif;
+
   }
   
   /* navbar */
   .navbar {
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: end;
+    align-items: flex-end;
     gap: 40px;
     min-height: 70px;
     z-index: 1000 !important;
-    border-bottom: 1px solid white;
-    background: rgba(0,0,0);
+    background: rgb(250, 247, 240);;
   }
   
   
   /* logo  */
   .logo {
     font-size: 30px;
+    margin-right: auto;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -55,7 +65,7 @@
     }
   
     .bar {
-        background-color: white;
+        background-color: black;
           width: 20px;
           height: 3px;
           display: block;
@@ -89,7 +99,7 @@
       transition: 0.7s ease-in-out;
       padding: 10px;
       z-index: 1000 !important;
-      background: rgba(0,0,0,0.9);
+      background: rgb(250, 247, 240, 0.9);
     }
   
     .navMenu.active{
