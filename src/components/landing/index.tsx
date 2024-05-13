@@ -16,7 +16,9 @@ const Landing: React.FC = () => {
         <Navbar />
         <main className='margin-auto'>
         <Frame/>
+        <a id="about">
         <About/>
+        </a>
         <RevealOnScroll>
         <h1 className="text-black text-center text-6xl mt-5">Our Team</h1>
         <a id='team' className='flex flex-col md:flex-row mt-5 md:mt-0 justify-center'>

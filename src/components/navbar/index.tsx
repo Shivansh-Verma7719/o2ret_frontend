@@ -25,7 +25,7 @@ function Navbar() {
     window.onscroll = handleScroll;
 
     return () => {
-      window.onscroll = null; // Cleanup function
+      window.onscroll = null;
     };
   }, []);
   // ${scroll ? styles.sticky : ""}

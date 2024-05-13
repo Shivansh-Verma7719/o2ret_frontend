@@ -124,7 +124,7 @@ export function Typewriter() {
     return (
       <div className="flex flex-col items-center justify-center h-[18rem]">
         <p className="text-black dark:text-neutral-200 text-md sm:text-base  ">
-          <b>Get started with us Excited!</b>
+          <b>Get started with us</b>
         </p>
         <TypewriterEffect words={words} />
         

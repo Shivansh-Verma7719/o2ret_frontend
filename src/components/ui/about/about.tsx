@@ -36,7 +36,7 @@ function about() {
       <img src={magnetImage} className='image' alt="Magnet"/> 
 
       <div className='about-text py-10 md:py-0'>
-        <h1>Shelf-space acquisition and curation</h1>
+        <h1>Shelf-Space Acquisition and Curation</h1>
         <p>At Modern Trade/A+ Stores/HoReCa outlets/gyms/mall pop-ups/salons etc. Helps get offline brand discovery thus aiding in purchase intent on marketplaces (reducing your CAC/Retention Costs on Marketplaces and getting traffic to your websites) Also, it’s your entry into ~95% of India’s retail market</p>
         </div>
         </div>
@@ -44,7 +44,7 @@ function about() {
         <RevealOnScroll>
         <div className="about-section">
         <div className='about-text2 py-10 md:py-0'>
-        <h2>Distributor aggregation</h2>
+        <h2>Distributor Aggregation</h2>
         <p>Distributor aggregation for reaching value-seeking audiences and ensuring repetitive purchases (retention). Helps push products to general trade and other sales channels to reach target consumers. Onboarding distributors/retailers on ONDC.</p>
         </div>
         <img src={shopImage} className='image' alt="Shop" />
