@@ -7,21 +7,36 @@
 
 
 .container {
-  text-align: center; /* Center align the text */
-  max-width: 700px; /* Max width for better readability, adjust based on your layout needs */
+  text-align: center;
+  max-width: 700px;
   margin: auto; 
-  height: 40rem;
+  height: 30rem;
 }
 
 .heading {
-  color: rgb(0, 63, 152); /* Pick the exact color from the design */
-  font-size: 60px; /* Adjust size as needed */
-  font-weight: 800; /* Ensure it's not bold unless specified */
+  color: rgb(0, 63, 152);
+  font-size: 60px; 
+  font-weight: 800;
   font-family: "Neue Regrade Extrabold", serif;
 }
 
-p {
-  color: #3f4553; /* Lighter shade for the paragraph */
-  font-size: 20px; /* Smaller text for the paragraph */
+.heading_text {
+  color: #3f4553;
+  font-size: 20px;
 }
+
+@media screen and (max-width: 780px){
+  .heading {
+    font-size: 32px; 
+  }
+  .container {
+    padding: 5%;
+  }
+  .heading_text {
+    font-size: 12px;
+    line-height: 16.2px;
+  }
+}
+
+
 

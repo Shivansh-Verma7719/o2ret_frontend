@@ -33,7 +33,7 @@ function Navbar() {
     <div className="App" style={{ zIndex: 1000 }}>
       <header className="App-header">
         <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
-          <a href='/' className={`${styles.logo}`}><img src={Logo} alt="Logo" width={200}/> </a>
+          <a href='/' className={`${styles.logo}`}><img src={Logo} alt="Logo" width={150}/> </a>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
           <li onClick={removeActive}>
               <a href='#home' className={`${styles.navLink}`}>Home</a>

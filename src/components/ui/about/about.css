@@ -10,7 +10,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: -3rem;
   }
 
 .about-section {
@@ -30,7 +29,7 @@
 
 .about-text2{
     margin-right: auto;
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -40,7 +39,7 @@
     font-family: "Neue Regrade Extrabold", serif;
   }
   
-  p {
+  .about-section p {
     color: #6A7BA2;
     font-size: 24px;
   }
@@ -53,25 +52,31 @@
   @media screen and (max-width: 768px) {
     .about-section {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 2%;
+      padding-right: 2%;
       padding-top: 0;
     }
+    .about-section p{
+      font-size: 12px !important;
+    }
+    .titles{
+      font-size: 24px;
+      line-height: 30px;
+    }
     .about-text{
-        width: 80%;
+        width: 60%;
         margin: auto;
         text-align: center;
     }
     .about-text2{
-        width: 80%;
+        width: 60%;
         margin: auto;
         text-align: center;
     }
-    .image{
-      display: none;
+    .image {
+      width: 30%; /* Adjust based on your design */
     }
     
   }

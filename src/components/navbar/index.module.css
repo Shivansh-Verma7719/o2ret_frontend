@@ -65,7 +65,7 @@
     }
   
     .bar {
-        background-color: black;
+        background-color: rgb(0, 63, 152);
           width: 20px;
           height: 3px;
           display: block;
@@ -115,7 +115,7 @@
 
 @keyframes fadeInDown {
     0% {
-      opacity: 0;
+      opacity: 0.5;
       transform: translateY(-20px);
     }
     100% {
@@ -128,7 +128,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    animation-duration: 0.7s;
+    animation-duration: 0.4s;
     animation-name: fadeInDown;
     animation-timing-function: ease-out;
   }

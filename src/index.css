@@ -16,4 +16,8 @@ html {
 scrollbar-width: none;  /* Firefox */
 }
 
+p{
+  font-family: 'Satoshi', sans-serif;
+}
+
 
