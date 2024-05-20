@@ -25,11 +25,13 @@
 .about-text{
     margin-left: auto;
     width: 40%;
+    text-align: right;
 }
 
 .about-text2{
     margin-right: auto;
     width: 40%;
+    text-align: left;
 }
 
 
@@ -68,12 +70,10 @@
     .about-text{
         width: 60%;
         margin: auto;
-        text-align: center;
     }
     .about-text2{
         width: 60%;
         margin: auto;
-        text-align: center;
     }
     .image {
       width: 30%; /* Adjust based on your design */
