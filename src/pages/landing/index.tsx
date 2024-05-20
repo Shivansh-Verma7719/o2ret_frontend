@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../navbar/index';
+import Navbar from '../../components/navbar/index';
 import './index.css';
-import ThreeDCard from '../ui/3dcard';
-import About from '../ui/about/about';
-import Frame from '../ui/frame/FrameComponent3';
+import ThreeDCard from '../../components/ui/3dcard';
+import About from '../../components/ui/about/about';
+import Frame from '../../components/ui/frame/FrameComponent3';
 import pf1 from '../../assets/images/shivansh-verma.jpg';
 import pf2 from '../../assets/images/tejas-mehta.jpg';
-import Typewriter from '../ui/typewriter';
-import Footer from '../footer/footer';
+import Typewriter from '../../components/ui/typewriter';
+import Footer from '../../components/footer/footer';
 
 const Landing: React.FC = () => {
     return (
