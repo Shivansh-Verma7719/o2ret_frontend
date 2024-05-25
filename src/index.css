@@ -9,6 +9,7 @@ body {
 html::-webkit-scrollbar {
   display: none;
 }
+html { scroll-behavior: smooth; }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 html {

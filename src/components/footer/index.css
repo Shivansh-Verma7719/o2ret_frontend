@@ -5,6 +5,21 @@
 }
 .email{
     font-size: 1.5em;
+    font-family: 'Satoshi', sans-serif !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-out;
+}
+.emailcont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 600px){
     .email{
