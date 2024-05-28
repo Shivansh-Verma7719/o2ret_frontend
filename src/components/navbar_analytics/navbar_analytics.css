@@ -1,0 +1,50 @@
+.navbar-container {
+  background-color: #faf7f0;
+  min-height: 100vh;
+}
+
+.open {
+  width: 100px;
+}
+
+.closed {
+  width: 100px;
+}
+
+.logo-transition {
+  transition: width 0.5s ease;
+}
+
+.top-menus {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bottom-menus {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.top-menu {
+  padding: 20px;
+}
+
+.bottom-menus{
+  margin-top: 100px;
+}
+
+.bottom-menus-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 200px; 
+  height: 100vh; 
+  padding-bottom: 1rem;
+  padding-top: 100px;
+}
+

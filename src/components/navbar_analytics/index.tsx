@@ -52,6 +52,7 @@ const Navbar: React.FC = () => {
           />
           <hr className="border-gray-800 w-full mt-4" />
         </div>
+        <div className="top-menu" >
         <div className="mt-4 flex flex-col gap-4 relative">
           {topMenus.map((menu, i) => (
             <Link
@@ -82,8 +83,9 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
         </div>
+        </div>
         <div className="bottom-menus-container">
-        <div className="mt-auto flex flex-col gap-4 relative">
+        <div className="mb-auto flex flex-col gap-4 relative">
         <hr className="border-gray-800 w-full mt-4" />
           {bottomMenus.map((menu, i) => (
             <Link
