@@ -38,6 +38,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
+    <div className='navbar-analytics-container'>
     <div className="sidebar">
       <div className="logo">
         <img src={logo} alt="Logo" />
@@ -54,6 +55,7 @@ const Navbar: React.FC = () => {
       <div className="border-nav"></div>
         {renderMenuItems(bottomMenuItems)}
       </ul>
+    </div>
     </div>
   );
 };
