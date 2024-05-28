@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<Landing/>} />
         {/* Remove when page is complete */}
         {/* <Route path="/analytics" element={<AnalyticsPage/>} /> */}
+        <Route path="/analytics" element={<AnalyticsPage/>} />
       </Routes>
     </BrowserRouter>
   );  
