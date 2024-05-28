@@ -1,7 +1,18 @@
-body {
-    font-family: "Neue Regrade Extrabold"!important;
-    background-color: #ffff;
-  }
+.navbar-analytics-container {
+  background-color: #ffff; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-analytics-container .sidebar {
+  width: 256px;
+  background-color: #faf7f0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
   
   .sidebar {
     height: 100vh;

@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       </div>
 
       
-      <div className="border"></div>
+      <div className="border-nav"></div>
 
       <ul className="menu">
         {renderMenuItems(topMenuItems)}
