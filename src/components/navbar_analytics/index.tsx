@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
-import './index.css';
+import './navbar_analytics.css';
 
 /**
   *Task: Navbar Component
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
       </ul>
       
       <ul className="menu-bottom">
-      <div className="border"></div>
+      <div className="border-nav"></div>
         {renderMenuItems(bottomMenuItems)}
       </ul>
     </div>
