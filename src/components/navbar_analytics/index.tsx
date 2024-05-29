@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { IoMdHome } from "react-icons/io"; 
 import logo from "../../assets/images/logo.png";
-import collapsedLogo from "../../assets/images/image.png"; 
+import { ReactComponent as HomeSimpleDoor } from "../../assets/icons/home-simple-door.svg"; /* icon added */
+import collapsedLogo from "../../assets/images/image.png";
 import './navbar_analytics.css';
 
 interface MenuItem {
@@ -12,22 +12,22 @@ interface MenuItem {
 }
 
 const topMenuItems: MenuItem[] = [
-  { title: 'Home', link: '/', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome }
+  { title: 'Home', link: '/', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor }
 ];
 
 const bottomMenuItems: MenuItem[] = [
-  { title: 'Home', link: '', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome },
-  { title: 'Home', link: '', icon: IoMdHome }
+  { title: 'Home', link: '', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor },
+  { title: 'Home', link: '', icon: HomeSimpleDoor }
 ];
 
 const Navbar: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Start minimized
 
   useEffect(() => {
     setTimeout(() => {

@@ -31,7 +31,7 @@
 }
 
 .logo, .collapsed-logo {
-  width: 90%;
+  width: 50%;   /* reduced the logo size */
   transition: opacity 0.5s ease;
 }
 
@@ -53,6 +53,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center; 
+
 }
 
 .sidebar .menu {
@@ -73,6 +75,7 @@
 .sidebar .menu-bottom .menu-link {
   display: flex;
   align-items: center;
+  justify-content: center; 
   text-decoration: none;
   color: black;
   font-weight: bold;
