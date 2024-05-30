@@ -14,13 +14,13 @@
   0% {
     width: 256px;
   }
-  60% {
+  /* 60% {
     width: 80px;
   }
   80% {
     width: 100px;
-  }
-  90% {
+  } */
+  70% {
     width: 90px;
   }
   100% {
@@ -44,7 +44,7 @@
 
 .sidebar.collapsed {
   width: 100px;
-  animation: bounceCollapse 0.7s ease forwards;
+  animation: bounceCollapse 0.5s ease forwards;
 }
 
 .sidebar.expanded {
