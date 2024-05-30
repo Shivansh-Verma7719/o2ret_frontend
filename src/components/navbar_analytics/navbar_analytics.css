@@ -20,8 +20,8 @@
   80% {
     width: 100px;
   } */
-  70% {
-    width: 90px;
+  60% {
+    width: 73px;
   }
   100% {
     width: 100px;
@@ -49,11 +49,11 @@
 
 .sidebar.expanded {
   width: 256px;
-  animation: bounceExpand 0.7s ease forwards;
+  animation: bounceExpand 0.3s ease forwards;
 }
 
 .sidebar:hover {
-  animation: bounceExpand 0.7s ease forwards;
+  animation: bounceExpand 0.5s ease forwards;
 }
 
 .logo-container {
