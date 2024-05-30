@@ -1,3 +1,41 @@
+ @keyframes bounceIn {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+
+@keyframes bounceOut {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(20px);
+  }
+  40% {
+    transform: translateX(-15px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+}
+
+
 .navbar-analytics-container {
   background-color: #ffff; 
   height: 100vh;
@@ -15,9 +53,15 @@
   transition: width 0.5s ease;
   height: 100vh;
 }
-  
+
 .sidebar.collapsed {
   width: 100px; 
+  animation: bounceIn 1s ease; /* Bounce effect for collapsing */
+}
+
+.sidebar.expanded {
+  width: 256px;
+  animation: bounceOut 1s ease; /* Bounce effect for expanding */
 }
 
 .logo-container {
@@ -25,24 +69,13 @@
   justify-content: center;
   align-items: center;
   height: 64px; 
-  transition: all 0.5s ease;
   margin-bottom: 5px; 
   margin-top: 40px;
 }
 
-.logo, .collapsed-logo {
-  width: 50%;   /* reduced the logo size */
-  transition: opacity 0.5s ease;
-}
-
-.logo.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.collapsed-logo.hidden {
-  opacity: 0;
-  visibility: hidden;
+.logo {
+  width: auto;
+  transition: none; /* Removed transition to keep the logo static */
 }
 
 .sidebar .menu,
@@ -54,7 +87,6 @@
   flex-direction: column;
   gap: 10px;
   justify-content: center; 
-
 }
 
 .sidebar .menu {
@@ -75,7 +107,7 @@
 .sidebar .menu-bottom .menu-link {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: left; 
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -85,6 +117,9 @@
 .menu-icon {
   font-size: 24px;
   margin-right: 10px;
+  align-items: center;
+  justify-items: center;
+  transform: translateX(20px);
 }
 
 .menu-icon.large {

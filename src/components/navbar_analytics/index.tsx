@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
 import { ReactComponent as HomeSimpleDoor } from "../../assets/icons/home-simple-door.svg"; /* icon added */
-import collapsedLogo from "../../assets/images/image.png";
 import './navbar_analytics.css';
 
 interface MenuItem {
@@ -54,8 +53,7 @@ const Navbar: React.FC = () => {
         onMouseLeave={() => setIsOpen(false)}
       >
         <div className="logo-container">
-          <img src={logo} alt="Logo" className={`logo ${isOpen ? 'open' : 'hidden'}`} />
-          <img src={collapsedLogo} alt="Collapsed Logo" className={`collapsed-logo ${isOpen ? 'hidden' : 'open'}`} />
+          <img src={logo} alt="Logo" className={`logo`} />
         </div>
 
         <div className="border-nav"></div>
