@@ -1,52 +1,40 @@
- @keyframes bounceIn {
-  0%, 100% {
-    transform: translateX(0);
+@keyframes bounceExpand {
+  0% {
+    width: 100px;
   }
-  20% {
-    transform: translateX(-20px);
+  70% {
+    width: 300px;
   }
-  40% {
-    transform: translateX(15px);
+  100% {
+    width: 256px;
+  }
+}
+
+@keyframes bounceCollapse {
+  0% {
+    width: 256px;
   }
   60% {
-    transform: translateX(-10px);
+    width: 80px;
   }
   80% {
-    transform: translateX(5px);
+    width: 100px;
+  }
+  90% {
+    width: 90px;
+  }
+  100% {
+    width: 100px;
   }
 }
 
-
-@keyframes bounceOut {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(20px);
-  }
-  40% {
-    transform: translateX(-15px);
-  }
-  60% {
-    transform: translateX(10px);
-  }
-  80% {
-    transform: translateX(-5px);
-  }
+.navbar-analytics-container{
+  background-color: #fff;
 }
 
-
-.navbar-analytics-container {
-  background-color: #ffff; 
-  height: 100vh;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.navbar-analytics-container .sidebar {
+.sidebar {
   width: 256px;
-  background-color: #faf7f0; 
+  background-color: #faf7f0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,27 +43,31 @@
 }
 
 .sidebar.collapsed {
-  width: 100px; 
-  animation: bounceIn 1s ease; /* Bounce effect for collapsing */
+  width: 100px;
+  animation: bounceCollapse 0.7s ease forwards;
 }
 
 .sidebar.expanded {
   width: 256px;
-  animation: bounceOut 1s ease; /* Bounce effect for expanding */
+  animation: bounceExpand 0.7s ease forwards;
+}
+
+.sidebar:hover {
+  animation: bounceExpand 0.7s ease forwards;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px; 
-  margin-bottom: 5px; 
+  height: 64px;
+  margin-bottom: 5px;
   margin-top: 40px;
 }
 
 .logo {
   width: auto;
-  transition: none; /* Removed transition to keep the logo static */
+  transition: none;
 }
 
 .sidebar .menu,
@@ -86,7 +78,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .sidebar .menu {
@@ -107,7 +99,7 @@
 .sidebar .menu-bottom .menu-link {
   display: flex;
   align-items: center;
-  justify-content: left; 
+  justify-content: left;
   text-decoration: none;
   color: black;
   font-weight: bold;
