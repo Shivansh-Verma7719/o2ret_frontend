@@ -58,6 +58,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  transform: translateX(-25px);
 }
 
 
