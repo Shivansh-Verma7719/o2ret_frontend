@@ -1,4 +1,4 @@
-/* Keyframes for animations */
+
 @keyframes bounceExpand {
   0% {
     width: 5%;
@@ -17,7 +17,7 @@
   }
 }
 
-/* Sidebar container styles */
+
 .sidebar-container {
   position: relative;
   width: 5%;
@@ -38,29 +38,35 @@
   width: 20%;
   animation: bounceExpand 0.3s ease forwards;
 }
-
-/* Logo container styles */
+/* logo-container*/
 .logo-container {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  height: 64px;
-  margin-bottom: 0;
+  height: 64px; 
+  transition: all 0.5s ease;
+  margin-bottom: 5px; 
   margin-top: 40px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  transform: translateX(-25px);
 }
 
-.logo {
-  width: 121px;
-  height: 35px;
-  transition: width 0.3s ease;
-  position: absolute;
-  left: 55px;
+/*collpsed logo */
+
+.logo, .collapsed-logo {
+  width: 50%;   
+  transition: opacity 0.5s ease;
 }
 
+/* logo hidden */
+.logo.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.collapsed-logo.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .border-nav {
   border-top: 1px solid #e0e0e0;
@@ -69,7 +75,7 @@
   margin: 10px auto;
 }
 
-/* Menu styles */
+
 .sidebar .menu {
   padding: 20px 0;
   margin: 0;
