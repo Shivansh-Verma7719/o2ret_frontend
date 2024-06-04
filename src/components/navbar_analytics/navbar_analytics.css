@@ -1,4 +1,3 @@
-
 @keyframes bounceExpand {
   0% {
     width: 5%;
@@ -16,7 +15,6 @@
     width: 5%;
   }
 }
-
 
 .sidebar-container {
   position: relative;
@@ -38,7 +36,7 @@
   width: 20%;
   animation: bounceExpand 0.3s ease forwards;
 }
-/* logo-container*/
+
 .logo-container {
   display: flex;
   justify-content: center;
@@ -49,19 +47,15 @@
   margin-top: 40px;
 }
 
-
-
 .logo, .collapsed-logo {
   width: 50%;   
   transition: opacity 0.5s ease;
 }
 
-/* logo hidden */
 .logo.hidden {
   opacity: 0;
   visibility: hidden;
 }
-
 
 .collapsed-logo.hidden {
   opacity: 0;
@@ -74,7 +68,6 @@
   width: 90%;
   margin: 10px auto;
 }
-
 
 .sidebar .menu {
   padding: 20px 0;
@@ -119,7 +112,6 @@
   padding: 0 20px;
   display: flex;
   align-items: center;
-
 }
 
 .sidebar .menu-bottom .menu-link {
@@ -131,7 +123,6 @@
   transition: all 0.3s ease;
 }
 
-
 .menu-icon {
   font-size: 24px;
   margin-right: 10px;
@@ -142,13 +133,11 @@
   height: 24px;
 }
 
-
 .menu-text {
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 1; 
   margin-left: 5px; 
 }
-
 
 .sidebar-container.expanded .menu-text {
   opacity: 1; 
@@ -160,72 +149,14 @@
   transform: translateX(-20px);
 }
 
-
 .sidebar-container.collapsed .menu-icon {
   opacity: 1; 
 }
 
 
-/*Responsivess*/
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 768px) {
   .sidebar-container {
     width: 15%;
-  }
-
-  .sidebar-container.collapsed {
-    width: 15%;
-  }
-
-  .sidebar-container.expanded {
-    width: 30%;
-  }
-
-  .sidebar-container:hover {
-    width: 30%;
-  }
-
-  .menu-icon {
-    font-size: 18px;
-    width: 18px;
-    height: 18px;
-  }
-
-  .menu-text {
-    font-size: 1rem; 
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .sidebar-container {
-    width: 10%;
-  }
-
-  .sidebar-container.collapsed {
-    width: 10%;
-  }
-
-  .sidebar-container.expanded {
-    width: 25%;
-  }
-
-  .sidebar-container:hover {
-    width: 25%;
-  }
-
-  .menu-icon {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-  }
-
-  .menu-text {
-    font-size: 1.125rem; 
-  }
-}
-
-@media (min-width: 1201px) {
-  .sidebar-container {
-    width: 5%;
   }
 
   .sidebar-container.collapsed {
@@ -233,20 +164,6 @@
   }
 
   .sidebar-container.expanded {
-    width: 20%;
-  }
-
-  .sidebar-container:hover {
-    width: 20%;
-  }
-
-  .menu-icon {
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-  }
-
-  .menu-text {
-    font-size: 1.5rem; 
+    width: 25%;
   }
 }

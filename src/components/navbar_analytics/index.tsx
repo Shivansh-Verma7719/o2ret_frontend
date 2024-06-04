@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
-import { ReactComponent as HomeSimpleDoor } from "../../assets/icons/home-simple-door.svg"; /* icon added */
+import { ReactComponent as HomeSimpleDoor } from "../../assets/icons/home-simple-door.svg"; // icon added
 import collapsedLogo from "../../assets/images/image.png";
 import './navbar_analytics.css';
 
@@ -11,7 +11,7 @@ interface MenuItem {
   icon: React.ComponentType<React.ComponentProps<'svg'>>;
 }
 
-interface bottomMenuItems {
+interface BottomMenuItem {
   title: string;
   link: string;
   icon: React.ComponentType<React.ComponentProps<'svg'>>;
@@ -23,13 +23,11 @@ const topMenuItems: MenuItem[] = [
   { title: 'Heatmap 2', mapNo: 2, icon: HomeSimpleDoor },
 ];
 
-const bottomMenuItems: bottomMenuItems[] = [
+const bottomMenuItems: BottomMenuItem[] = [
   { title: 'Home', link: '/', icon: HomeSimpleDoor },
 ];
 
-const Navbar: React.FC<{
-  handleMapChange: (mapNumber: number) => void;
-  }> = ({ handleMapChange }) => {
+const Navbar: React.FC<{ handleMapChange: (mapNumber: number) => void }> = ({ handleMapChange }) => {
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,23 +37,23 @@ const Navbar: React.FC<{
     }, 100);
   }, []);
 
-    const renderMenuItems = (items: MenuItem[]) => {
+  const renderMenuItems = (items: MenuItem[]) => {
     return items.map((item, index) => (
       <li key={index} className="menu-item">
         <div className="menu-link">
           <item.icon className="menu-icon large" />
-          <button onClick={() => handleMapChange(item.mapNo)}><span className="menu-text">{item.title}</span></button>
+          {isOpen && <button onClick={() => handleMapChange(item.mapNo)}><span className="menu-text">{item.title}</span></button>}
         </div>
       </li>
     ));
   };
 
-  const renderBottomMenuItems = (items: bottomMenuItems[]) => {
+  const renderBottomMenuItems = (items: BottomMenuItem[]) => {
     return items.map((item, index) => (
       <li key={index} className="menu-item">
         <Link to={item.link} className="menu-link">
           <item.icon className="menu-icon large" />
-          <button onClick={() => handleMapChange(1)}><span className="menu-text">{item.title}</span></button>
+          {isOpen && <button><span className="menu-text">{item.title}</span></button>}
         </Link>
       </li>
     ));
@@ -67,7 +65,7 @@ const Navbar: React.FC<{
          onMouseLeave={() => setIsOpen(false)}>
       <div className="sidebar">
         <div className="logo-container">
-           <img src={logo} alt="Logo" className={`logo ${isOpen ? 'open' : 'hidden'}`} />
+          <img src={logo} alt="Logo" className={`logo ${isOpen ? 'open' : 'hidden'}`} />
           <img src={collapsedLogo} alt="Collapsed Logo" className={`collapsed-logo ${isOpen ? 'hidden' : 'open'}`} />
         </div>
         <div className="border-nav"></div>
