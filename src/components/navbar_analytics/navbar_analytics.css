@@ -27,6 +27,10 @@
   transition: width 0.5s ease;
 }
 
+.sidebar-container:hover {
+  animation: bounceExpand 0.3s ease forwards;
+}
+
 .sidebar-container.collapsed {
   width: 5%;
   animation: bounceCollapse 0.3s ease forwards;
@@ -48,11 +52,13 @@
 }
 
 .logo, .collapsed-logo {
+  display: block;
   width: 50%;   
   transition: opacity 0.5s ease;
 }
 
 .logo.hidden {
+  position: fixed;
   opacity: 0;
   visibility: hidden;
 }
@@ -60,6 +66,7 @@
 .collapsed-logo.hidden {
   opacity: 0;
   visibility: hidden;
+  position: fixed;
 }
 
 .border-nav {
@@ -70,6 +77,9 @@
 }
 
 .sidebar .menu {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
   padding: 20px 0;
   margin: 0;
   list-style-type: none;
@@ -81,9 +91,10 @@
 }
 
 .sidebar .menu-item {
-  padding: 0 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
+  
 }
 
 .sidebar .menu-link {
@@ -126,7 +137,7 @@
 .menu-icon {
   font-size: 24px;
   margin-right: 10px;
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: center;
   width: 24px;
@@ -137,20 +148,24 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 1; 
   margin-left: 5px; 
+  font-size: 24px;
 }
 
 .sidebar-container.expanded .menu-text {
   opacity: 1; 
   transform: translateX(0); 
+  padding: 0;
 }
 
 .sidebar-container.collapsed .menu-text {
   opacity: 0; 
   transform: translateX(-20px);
+  font-size: 24px;
 }
 
 .sidebar-container.collapsed .menu-icon {
   opacity: 1; 
+  
 }
 
 
