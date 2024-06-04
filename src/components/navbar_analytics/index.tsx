@@ -7,25 +7,29 @@ import './navbar_analytics.css';
 
 interface MenuItem {
   title: string;
+  mapNo: number;
+  icon: React.ComponentType<React.ComponentProps<'svg'>>;
+}
+
+interface bottomMenuItems {
+  title: string;
   link: string;
   icon: React.ComponentType<React.ComponentProps<'svg'>>;
 }
 
 const topMenuItems: MenuItem[] = [
+  { title: 'Main Map', mapNo: 0, icon: HomeSimpleDoor },
+  { title: 'Heatmap 1', mapNo: 1, icon: HomeSimpleDoor },
+  { title: 'Heatmap 2', mapNo: 2, icon: HomeSimpleDoor },
+];
+
+const bottomMenuItems: bottomMenuItems[] = [
   { title: 'Home', link: '/', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor }
 ];
 
-const bottomMenuItems: MenuItem[] = [
-  { title: 'Home', link: '', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor },
-  { title: 'Home', link: '', icon: HomeSimpleDoor }
-];
-
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{
+  handleMapChange: (mapNumber: number) => void;
+  }> = ({ handleMapChange }) => {
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,12 +39,23 @@ const Navbar: React.FC = () => {
     }, 100);
   }, []);
 
-  const renderMenuItems = (items: MenuItem[]) => {
+    const renderMenuItems = (items: MenuItem[]) => {
+    return items.map((item, index) => (
+      <li key={index} className="menu-item">
+        <a href='#' className="menu-link">
+          <item.icon className="menu-icon large" />
+          <button onClick={() => handleMapChange(item.mapNo)}><span className="menu-text">{item.title}</span></button>
+        </a>
+      </li>
+    ));
+  };
+
+  const renderBottomMenuItems = (items: bottomMenuItems[]) => {
     return items.map((item, index) => (
       <li key={index} className="menu-item">
         <Link to={item.link} className="menu-link">
           <item.icon className="menu-icon large" />
-          <span className="menu-text">{item.title}</span>
+          <button onClick={() => handleMapChange(1)}><span className="menu-text">{item.title}</span></button>
         </Link>
       </li>
     ));
@@ -61,7 +76,7 @@ const Navbar: React.FC = () => {
         </ul>
         <ul className="menu-bottom">
           <div className="border-nav"></div>
-          {renderMenuItems(bottomMenuItems)}
+          {renderBottomMenuItems(bottomMenuItems)}
         </ul>
       </div>
     </div>
