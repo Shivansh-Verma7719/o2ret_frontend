@@ -42,10 +42,10 @@ const Navbar: React.FC<{
     const renderMenuItems = (items: MenuItem[]) => {
     return items.map((item, index) => (
       <li key={index} className="menu-item">
-        <a href='#' className="menu-link">
+        <div className="menu-link">
           <item.icon className="menu-icon large" />
           <button onClick={() => handleMapChange(item.mapNo)}><span className="menu-text">{item.title}</span></button>
-        </a>
+        </div>
       </li>
     ));
   };
