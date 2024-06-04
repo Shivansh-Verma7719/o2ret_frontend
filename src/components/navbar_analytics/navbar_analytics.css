@@ -1,3 +1,4 @@
+
 @keyframes bounceExpand {
   0% {
     width: 5%;
@@ -48,7 +49,7 @@
   margin-top: 40px;
 }
 
-/*collpsed logo */
+
 
 .logo, .collapsed-logo {
   width: 50%;   
@@ -162,4 +163,90 @@
 
 .sidebar-container.collapsed .menu-icon {
   opacity: 1; 
+}
+
+
+/*Responsivess*/
+@media (min-width: 600px) and (max-width: 767px) {
+  .sidebar-container {
+    width: 15%;
+  }
+
+  .sidebar-container.collapsed {
+    width: 15%;
+  }
+
+  .sidebar-container.expanded {
+    width: 30%;
+  }
+
+  .sidebar-container:hover {
+    width: 30%;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .menu-text {
+    font-size: 1rem; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .sidebar-container {
+    width: 10%;
+  }
+
+  .sidebar-container.collapsed {
+    width: 10%;
+  }
+
+  .sidebar-container.expanded {
+    width: 25%;
+  }
+
+  .sidebar-container:hover {
+    width: 25%;
+  }
+
+  .menu-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-text {
+    font-size: 1.125rem; 
+  }
+}
+
+@media (min-width: 1201px) {
+  .sidebar-container {
+    width: 5%;
+  }
+
+  .sidebar-container.collapsed {
+    width: 5%;
+  }
+
+  .sidebar-container.expanded {
+    width: 20%;
+  }
+
+  .sidebar-container:hover {
+    width: 20%;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-text {
+    font-size: 1.5rem; 
+  }
 }
