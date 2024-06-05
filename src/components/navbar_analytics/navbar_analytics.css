@@ -27,7 +27,8 @@
   transition: width 0.5s ease;
 }
 
-.sidebar-container:hover {
+.sidebar-container.expanded {
+  width: 20%;
   animation: bounceExpand 0.3s ease forwards;
 }
 
@@ -36,34 +37,21 @@
   animation: bounceCollapse 0.3s ease forwards;
 }
 
-.sidebar-container.expanded {
-  width: 20%;
-  animation: bounceExpand 0.3s ease forwards;
-}
-
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 64px; 
   transition: all 0.5s ease;
-  margin-bottom: 5px; 
-  margin-top: 40px;
+  margin: 40px 0 5px;
 }
 
 .logo, .collapsed-logo {
-  display: block;
   width: 50%;   
   transition: opacity 0.5s ease;
 }
 
-.logo.hidden {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.collapsed-logo.hidden {
+.logo.hidden, .collapsed-logo.hidden {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -76,9 +64,7 @@
   margin: 10px auto;
 }
 
-.sidebar .menu {
-  overflow: hidden;
-  position: fixed;
+.menu, .menu-bottom {
   width: 100%;
   padding: 20px 0;
   margin: 0;
@@ -87,45 +73,21 @@
   flex-direction: column;
   gap: 10px;
   transform: translateX(10px);
-  flex-grow: 1; 
 }
 
-.sidebar .menu-item {
-  padding: 0px 20px;
-  display: flex;
-  align-items: center;
-  
-}
-
-.sidebar .menu-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.sidebar .menu-bottom {
-  padding: 10px 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.menu-bottom {
   position: absolute; 
   bottom: 0; 
-  width: 100%;
-  transform: translateX(10px);  
 }
 
-.sidebar .menu-bottom .menu-item {
+.menu-item {
   padding: 0 20px;
   display: flex;
   align-items: center;
+  white-space: nowrap; /*no text wrap*/
 }
 
-.sidebar .menu-bottom .menu-link {
+.menu-link {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -137,7 +99,7 @@
 .menu-icon {
   font-size: 24px;
   margin-right: 10px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 24px;
@@ -145,7 +107,7 @@
 }
 
 .menu-text {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 1; 
   margin-left: 5px; 
   font-size: 24px;
@@ -154,20 +116,12 @@
 .sidebar-container.expanded .menu-text {
   opacity: 1; 
   transform: translateX(0); 
-  padding: 0;
 }
 
 .sidebar-container.collapsed .menu-text {
   opacity: 0; 
   transform: translateX(-20px);
-  font-size: 24px;
 }
-
-.sidebar-container.collapsed .menu-icon {
-  opacity: 1; 
-  
-}
-
 
 @media (min-width: 768px) {
   .sidebar-container {
