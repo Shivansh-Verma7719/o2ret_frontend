@@ -35,8 +35,7 @@ const Navbar: React.FC<{ handleMapChange: (mapNumber: number) => void }> = ({ ha
       <li key={index} className="menu-item">
         <div className="menu-link">
           <item.icon className="menu-icon large" />
-          <span className={`menu-text ${isOpen ? 'visible' : 'hidden'}`}>{item.title}</span>
-          <button onClick={() => handleMapChange(item.mapNo)}></button>
+          <button onClick={() => handleMapChange(item.mapNo)}><span className={`menu-text ${isOpen ? 'visible' : 'hidden'}`}>{item.title}</span></button>
         </div>
       </li>
     ));
