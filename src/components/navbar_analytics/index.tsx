@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
 import { ReactComponent as HomeSimpleDoor } from "../../assets/icons/home-simple-door.svg"; // icon added
@@ -28,21 +28,15 @@ const bottomMenuItems: BottomMenuItem[] = [
 ];
 
 const Navbar: React.FC<{ handleMapChange: (mapNumber: number) => void }> = ({ handleMapChange }) => {
-  const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsActive(true);
-    }, 100);
-  }, []);
 
   const renderMenuItems = (items: MenuItem[]) => {
     return items.map((item, index) => (
       <li key={index} className="menu-item">
         <div className="menu-link">
           <item.icon className="menu-icon large" />
-          {isOpen && <button onClick={() => handleMapChange(item.mapNo)}><span className="menu-text">{item.title}</span></button>}
+          <span className={`menu-text ${isOpen ? 'visible' : 'hidden'}`}>{item.title}</span>
+          <button onClick={() => handleMapChange(item.mapNo)}></button>
         </div>
       </li>
     ));
@@ -53,16 +47,18 @@ const Navbar: React.FC<{ handleMapChange: (mapNumber: number) => void }> = ({ ha
       <li key={index} className="menu-item">
         <Link to={item.link} className="menu-link">
           <item.icon className="menu-icon large" />
-          {isOpen && <button><span className="menu-text">{item.title}</span></button>}
+          <span className={`menu-text ${isOpen ? 'visible' : 'hidden'}`}>{item.title}</span>
         </Link>
       </li>
     ));
   };
 
   return (
-    <div className={`sidebar-container ${isOpen ? 'expanded' : 'collapsed'}`}
-         onMouseEnter={() => setIsOpen(true)}
-         onMouseLeave={() => setIsOpen(false)}>
+    <div
+      className={`sidebar-container ${isOpen ? 'expanded' : 'collapsed'}`}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <div className="sidebar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className={`logo ${isOpen ? 'open' : 'hidden'}`} />
