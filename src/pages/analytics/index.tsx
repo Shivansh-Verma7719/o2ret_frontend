@@ -9,7 +9,7 @@ const AnalyticsPage: React.FC = () => {
         if (mapNo === 0) {
             return (
                 <iframe 
-                    src="https://www.google.com/maps/d/u/0/embed?mid=1-X2hHZ7X_pai2ETudwiUxlK_CfLhT4s&ehbc=2E312F" 
+                    src="https://www.google.com/maps/d/embed?mid=1RHsLPogkzUkaINDL1o4J-eto6zucGu4&ehbc=2E312F"
                 ></iframe>
             );
         } else if (mapNo === 1) {
