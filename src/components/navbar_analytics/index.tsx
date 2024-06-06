@@ -20,7 +20,7 @@ interface BottomMenuItem {
 const topMenuItems: MenuItem[] = [
   { title: 'Main Map', mapNo: 0, icon: HomeSimpleDoor },
   { title: 'Sales Heatmap', mapNo: 1, icon: HomeSimpleDoor },
-  { title: 'Market Penetration Heatmap', mapNo: 2, icon: HomeSimpleDoor },
+  { title: 'MP Heatmap', mapNo: 2, icon: HomeSimpleDoor },
 ];
 
 const bottomMenuItems: BottomMenuItem[] = [
