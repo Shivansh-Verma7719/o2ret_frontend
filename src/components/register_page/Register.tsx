@@ -1,7 +1,6 @@
 import React from 'react';
-import './login.css';
+import './register.css';
 import logo from "../../assets/images/logo.png"
-import password from "../../assets/icons/lock.svg";
 import image from "../../assets/images/image 4.png";
 
 const Login: React.FC = () => {
@@ -15,8 +14,7 @@ const Login: React.FC = () => {
           
           <div className='sign-in'>
            <h2>Sign In</h2> 
-           <p>If you don't have an account you <br />can <strong><a href="/register">Register here!</a></strong></p>
-
+            <p>If you already have an account you <br />can <a href="/login"><strong>Login here!</strong></a></p>
           </div>
           <form>
             <div className="input-group">
@@ -24,8 +22,16 @@ const Login: React.FC = () => {
               <input type="email" id="email" placeholder="Enter your email address" required />
             </div>
             <div className="input-group">
+                <label htmlFor='username'>Username</label>
+                <input type="text" id="username" placeholder="Enter your user name" required />
+            </div>
+            <div className="input-group">
               <label htmlFor="password">Password</label>
               <input type="password" id="password" placeholder="Enter your Password" required />
+            </div>
+            <div className="input-group">
+              <label htmlFor="confirm-password">Password</label>
+              <input type="password" id="confirm-password" placeholder="Confirm your Password" required />
             </div>
             <div className="options">
               <label>
@@ -40,7 +46,7 @@ const Login: React.FC = () => {
       </div>
       <div className="login-image">
        <img src={image} alt="dashboard-img" className='dash-img' />
-       <div className='sign-text'><h2>Sign in to your Dashboard</h2></div>
+       <div className='sign-text'><h2>Sign Up to your Dashboard</h2></div>
         
       </div>
     </div>
