@@ -8,7 +8,6 @@ import image1 from "../../assets/images/Frame 443.png";
 import image2 from "../../assets/images/Frame 442.png";
 import image3 from "../../assets/images/Frame 441.png";
 import image4 from "../../assets/images/Frame 440.png";
-
 import { ReactComponent as SettingIcon } from "../../assets/icons/settings.svg";
 import collapsedLogo from "../../assets/images/image.png";
 import './dashboard.css';
@@ -80,6 +79,9 @@ const Navbar: React.FC = () => {
 
 const Dashboard: React.FC = () => {
   const [showFullStoreList, setShowFullStoreList] = useState(false);
+  const [viewingFullStore, setViewingFullStore] = useState(false);
+  const [selectedStore, setSelectedStore] = useState<any>(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   const summaryItems = [
     { image: image1 },
@@ -100,9 +102,19 @@ const Dashboard: React.FC = () => {
     setShowFullStoreList(true);
   };
 
-  const handleSeeMoreFullClick = () => {
-    //  to handle next click
-  }
+  const handleSeeMoreFullClick = (store: any) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    setSelectedStore(store);
+    setViewingFullStore(true);
+  };
+
+  const handleSendSamplesClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   const renderMainContent = () => (
     <div>
@@ -163,8 +175,8 @@ const Dashboard: React.FC = () => {
 
   const renderFullStoreList = () => (
     <div className="full-store-list">
-       <header className="header">
-       <div className="menu-text-active">
+      <header className="header">
+        <div className="menu-text-active">
           <form className="search-form">
             <input 
               type="text" 
@@ -173,7 +185,7 @@ const Dashboard: React.FC = () => {
               aria-label="Search"
             />
           </form>
-          </div>
+        </div>
         <div className="brand-info">
           <div className="brand-name">Brand Name</div>
           <div className="profile-icon">
@@ -194,8 +206,10 @@ const Dashboard: React.FC = () => {
                 <p>{store.phone}</p>
               </div>
               <div className="full-store-see-more">
-               <button><a href="#" onClick={handleSeeMoreFullClick}>see more</a></button> 
-                </div>
+                <button>
+                  <a href="#customer-card" onClick={handleSeeMoreFullClick(store)}>See More</a>
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -203,12 +217,67 @@ const Dashboard: React.FC = () => {
     </div>
   );
 
+  const renderFullStoreDetails = () => (
+    <div className="full-store-details">
+      <header className="header">
+        <div className="menu-text-active">
+          <form className="search-form">
+            <input 
+              type="text" 
+              className="search-input" 
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+        <div className="brand-info">
+          <div className="brand-name">Brand Name</div>
+          <div className="profile-icon">
+            <i className="icon-profile-circle"></i>
+          </div>
+        </div>
+      </header>
+      <div id='customer-card'>
+        <div className="custom-store-detail-card">
+          <div className="store-name-custom"></div>
+          <h3>{selectedStore.name}</h3>
+          <div className="custom-store-logos">
+            <div className="custom-store-logo"></div>
+            <div className="custom-store-logo"></div>
+            <div className="custom-store-logo"></div>
+          </div>
+          <div className="custom-store-info">
+            <p>Address: {selectedStore.address}</p>
+            <p>Phone: {selectedStore.phone}</p>
+            <p>Shelf Space: --------------------</p>
+            <p>Line Of Credit: -----------------</p>
+            <p>Avg Product Price Range: --------</p>
+            <p>Ticket Size: ---------------------</p>
+            <p>Product Category: ---------------</p>
+            <button className="custom-button" onClick={handleSendSamplesClick}>Send the Samples</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderPopup = () => (
+    <div className="popup-overlay">
+      <div className="popup">
+        <p>The samples have to be shipped to the xyz address.</p>
+        <button onClick={() => navigator.clipboard.writeText('xyz address')}>Copy the address</button>
+        <button onClick={handleClosePopup}>Continue</button>
+      </div>
+    </div>
+  );
+
   return (
     <div className="dashboard">
       <Navbar />
-      <main className="main-content">
-        {showFullStoreList ? renderFullStoreList() : renderMainContent()}
+      <main className={`main-content ${showPopup ? 'blurred' : ''}`}>
+        {viewingFullStore ? renderFullStoreDetails() : showFullStoreList ? renderFullStoreList() : renderMainContent()}
       </main>
+      {showPopup && renderPopup()}
     </div>
   );
 };

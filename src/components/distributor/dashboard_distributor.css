@@ -1,0 +1,194 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar Styles */
+  @keyframes bounceExpand {
+    0% {
+      width: 5%;
+    }
+    100% {
+      width: 20%;
+    }
+  }
+  
+  @keyframes bounceCollapse {
+    0% {
+      width: 20%;
+    }
+    100% {
+      width: 5%;
+    }
+  }
+  
+  .sidebar-container {
+    position: relative;
+    width: 5%;
+    background-color: #faf7f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .sidebar-container.expanded {
+    width: 20%;
+    animation: bounceExpand 0.3s ease forwards;
+  }
+  
+  .sidebar-container.collapsed {
+    width: 5%;
+    animation: bounceCollapse 0.3s ease forwards;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px; 
+    transition: all 0.5s ease;
+    margin: 40px 0 5px;
+  }
+  
+  .logo, .collapsed-logo {
+    width: 50%;   
+    transition: opacity 0.5s ease;
+  }
+  
+  .logo.hidden, .collapsed-logo.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+  
+  .border-nav {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100vh;
+    margin: 10px auto;
+  }
+  
+  .menu, .menu-bottom {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(10px);
+  }
+  
+  .menu-bottom {
+    position: absolute; 
+    bottom: 0; 
+  }
+  
+  .menu-item {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /*no text wrap*/
+  }
+  
+  .menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .menu-text {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1; 
+    margin-left: 5px; 
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 500;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(200, 219, 243, 255);
+  }
+  
+  .sidebar-container.expanded .menu-text {
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+  
+  .sidebar-container.collapsed .menu-text {
+    opacity: 0; 
+    transform: translateX(-20px);
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    overflow: scroll;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: 60px;
+  }
+
+  /* Add these styles to your existing dashboard.css */
+
+.brand-cards-container {
+    padding: 20px;
+  }
+  
+  .brand-card {
+    background-color: #faf7f0;
+    height: 245px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .brand-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #0044cc; /* Placeholder color, adjust as needed */
+    border-radius: 20%;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .brand-details p {
+    margin: 5px 0;
+  }
+  

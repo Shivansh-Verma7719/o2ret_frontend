@@ -1,0 +1,105 @@
+.self-space-table-container {
+  padding: 20px;
+}
+
+.table-controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  float: right;
+}
+
+.table-controls .btn {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  float: right;
+}
+
+.table-controls .btn svg {
+  margin-right: 5px;
+ 
+}
+
+.table-controls .btn.blue-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.table-controls .btn.white-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.self-space-table-container .table-controls .btn.white-btn{
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+
+}
+
+.self-space-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.self-space-table th,
+.self-space-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.self-space-table th {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.self-space-table th.sort-asc::after {
+  content: "▲";
+  margin-left: 5px;
+}
+
+.self-space-table th.sort-desc::after {
+  content: "▼";
+  margin-left: 5px;
+}
+
+.self-space-table td input[type="text"],
+.self-space-table td input[type="number"] {
+  width: 100%;
+  padding: 4px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Row selection styles */
+.self-space-table td input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Action buttons styles */
+.self-space-table td button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.self-space-table td button:hover {
+  color: #0056b3;
+}
+
+.self-space-table td button svg {
+  pointer-events: none;
+}
